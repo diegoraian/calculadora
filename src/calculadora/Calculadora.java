@@ -15,6 +15,8 @@ public class Calculadora {
 			Integer valorB  = Integer.parseInt(in.nextLine());
 			if ("+".equalsIgnoreCase(operacao)) {
 				System.out.println(adicao(valorA,valorB));
+			} else if ("-".equalsIgnoreCase(operacao)) {
+				System.out.println(subtracao(valorA,valorB));
 			}
 		}catch(Exception e) {
 			System.out.println("Digitou valor inválido");
@@ -25,6 +27,10 @@ public class Calculadora {
 
 	private static Integer adicao(Integer valorA, Integer valorB) {
 		return valorA + valorB;
+	}
+
+	private static Integer subtracao(Integer valorA, Integer valorB) {
+		return valorA - valorB;
 	}
 
 }
