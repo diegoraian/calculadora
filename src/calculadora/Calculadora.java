@@ -1,4 +1,4 @@
-package calculadora;
+﻿package calculadora;
 
 import java.util.Scanner;
 
@@ -18,6 +18,13 @@ public class Calculadora {
 			} else if ("-".equalsIgnoreCase(operacao)) {
 				System.out.println(subtracao(valorA,valorB));
 			}
+			} else if ("*".equalsIgnoreCase(operacao)) {
+				System.out.println(multiplicacao(valorA,valorB));
+			}
+			} else if ("/".equalsIgnoreCase(operacao)) {
+				System.out.println(divisao(valorA,valorB));
+			}
+	
 		}catch(Exception e) {
 			System.out.println("Digitou valor inválido");
 		}
@@ -32,5 +39,10 @@ public class Calculadora {
 	private static Integer subtracao(Integer valorA, Integer valorB) {
 		return valorA - valorB;
 	}
-
+	private static Integer multiplicacao(Integer valorA, Integer valorB) {
+		return valorA * valorB;
+	}
+	private static Integer divisao(Integer valorA, Integer valorB) {
+		return valorA / valorB;
+	}
 }
